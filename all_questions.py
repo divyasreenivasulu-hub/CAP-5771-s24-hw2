@@ -103,18 +103,18 @@ def question3():
     answer = {}
 
     # float
-    answer["(a) Gini, overall"] = 0.
+    answer["(a) Gini, overall"] = 0.5
 
     # float
     answer["(b) Gini, ID"] = 0.0
-    answer["(c) Gini, Gender"] = 0.
-    answer["(d) Gini, Car type"] = 0.
-    answer["(e) Gini, Shirt type"] = 0.
+    answer["(c) Gini, Gender"] = 0.48
+    answer["(d) Gini, Car type"] = 0.1625
+    answer["(e) Gini, Shirt type"] = 0.491
 
-    answer["(f) attr for splitting"] = ""
+    answer["(f) attr for splitting"] = "Car type"
 
     # Explanatory text string
-    answer["(f) explain choice"] = ""
+    answer["(f) explain choice"] = "The attribute that is used for splitting after the root node is car type because it has the least Gini index."
 
     return answer
 
@@ -135,45 +135,45 @@ def question4():
     #  'quantitative', 'interval', 'ratio'
     # If you have a choice between 'binary' and 'discrete', choose 'binary'
 
-    answer["a"] = []
+    answer["a"] = ['binary', 'quantitative', 'interval']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
     answer["a: explain"] = ""
 
-    answer["b"] = []
+    answer["b"] = ['continuous', 'quantitative', 'ratio']
     answer["b: explain"] = ""
 
-    answer["c"] = []
-    answer["c: explain"] = ""
+    answer["c"] = ['continuous', 'qualitative', 'ordinal']
+    answer["c: explain"] = "This can also be interval in quantitative classification"
 
-    answer["d"] = []
+    answer["d"] = ['continuous', 'quantitative', 'ratio']
     answer["d: explain"] = ""
 
-    answer["e"] = []
+    answer["e"] = ['discrete', 'qualitative', 'ordinal']
     answer["e: explain"] = ""
 
-    answer["f"] = []
+    answer["f"] = ['continuous', 'quantitative', 'ratio']
     answer["f: explain"] = ""
 
-    answer["g"] = []
+    answer["g"] = ['discrete', 'quantitative', 'ratio']
     answer["g: explain"] = ""
 
-    answer["h"] = []
+    answer["h"] = ['discrete', 'qualitative', 'nominal']
     answer["h: explain"] = ""
 
-    answer["i"] = []
+    answer["i"] = ['discrete', 'qualitative', 'nominal']
     answer["i: explain"] = ""
 
-    answer["j"] = []
+    answer["j"] = ['discrete', 'qualitative', 'ordinal']
     answer["j: explain"] = ""
 
-    answer["k"] = []
-    answer["k: explain"] = ""
+    answer["k"] = ['continuous', 'quantitative', 'ratio']
+    answer["k: explain"] = "it sometimes might be discrete when the measurement is like number of buildings away and it might be interval too"
 
-    answer["l"] = []
+    answer["l"] = ['continuous', 'quantitative', 'ratio']
     answer["l: explain"] = ""
 
-    answer["m"] = []
+    answer["m"] = ['discrete', 'qualitative', 'nominal']
     answer["m: explain"] = ""
 
     return answer
@@ -189,10 +189,10 @@ def question5():
 
     # string: one of 'Model 1' or 'Model 2'
     explain["a"] = ""
-    explain["a explain"] = ""
+    explain["a explain"] = "Model-2"
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["b"] = ""
+    explain["b"] = "Model-1"
     explain["b explain"] = ""
 
     explain["c similarity"] = ""
@@ -238,11 +238,11 @@ def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 0.
-    answer["b, info gain, Handedness"] = 0.
+    answer["a, info gain, ID"] = 1.0
+    answer["b, info gain, Handedness"] = 0.864
 
     # string: "ID" or "Handedness"
-    answer["c, which attrib"] = ""
+    answer["c, which attrib"] = "ID"
 
     # answer is a float
     answer["d, gain ratio, ID"] = 0.
