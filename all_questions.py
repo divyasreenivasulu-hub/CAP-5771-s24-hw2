@@ -62,7 +62,7 @@ def question1():
     answer["level2_left"] = level2_left
     answer["level2_right"] = level2_right
 
-    # Fill up `construct_tree``
+    # Fill up construct_tree`
     # tree, training_error = construct_tree()
     tree = u.BinaryTree("smoking == Yes")  # MUST STILL CREATE THE TREE *****
     A = tree.insert_left("cough = Yes")
