@@ -117,18 +117,19 @@ def question3():
     answer = {}
 
     # float
-    answer["(a) Gini, overall"] = 0.
+    answer["(a) Gini, overall"] = 0.5
 
     # float
     answer["(b) Gini, ID"] = 0.0
-    answer["(c) Gini, Gender"] = 0.
-    answer["(d) Gini, Car type"] = 0.
-    answer["(e) Gini, Shirt type"] = 0.
+    answer["(c) Gini, Gender"] = 0.48
+    answer["(d) Gini, Car type"] = 0.1625
+    answer["(e) Gini, Shirt type"] = 0.491
 
-    answer["(f) attr for splitting"] = ""
+    answer["(f) attr for splitting"] = "Car type"
 
     # Explanatory text string
-    answer["(f) explain choice"] = ""
+    answer["(f) explain choice"] = ""The attribute that is used for splitting after the root node is car type because it has the least Gini index."
+
 
     return answer
 
@@ -149,45 +150,45 @@ def question4():
     #  'quantitative', 'interval', 'ratio'
     # If you have a choice between 'binary' and 'discrete', choose 'binary'
 
-    answer["a"] = []
+    answer["a"] = ['binary', 'quantitative', 'interval']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
     answer["a: explain"] = ""
 
-    answer["b"] = []
+    answer["b"] = ['continuous', 'quantitative', 'ratio']
     answer["b: explain"] = ""
 
-    answer["c"] = []
+    answer["c"] = [continuous', 'qualitative', 'ordinal']
     answer["c: explain"] = ""
 
-    answer["d"] = []
+    answer["d"] = ['continuous', 'quantitative', 'ratio']
     answer["d: explain"] = ""
 
-    answer["e"] = []
+    answer["e"] = ['discrete', 'qualitative', 'ordinal']
     answer["e: explain"] = ""
 
-    answer["f"] = []
+    answer["f"] = ['continuous', 'quantitative', 'ratio']
     answer["f: explain"] = ""
 
-    answer["g"] = []
+    answer["g"] = ['discrete', 'quantitative', 'ratio']
     answer["g: explain"] = ""
 
-    answer["h"] = []
+    answer["h"] = ['discrete', 'qualitative', 'nominal']
     answer["h: explain"] = ""
 
-    answer["i"] = []
+    answer["i"] = ['discrete', 'qualitative', 'nominal']
     answer["i: explain"] = ""
 
-    answer["j"] = []
+    answer["j"] = ['discrete', 'qualitative', 'ordinal']
     answer["j: explain"] = ""
 
-    answer["k"] = []
+    answer["k"] = ['continuous', 'quantitative', 'ratio']
     answer["k: explain"] = ""
 
-    answer["l"] = []
+    answer["l"] = ['continuous', 'quantitative', 'ratio']
     answer["l: explain"] = ""
 
-    answer["m"] = []
+    answer["m"] = ['discrete', 'qualitative', 'nominal']
     answer["m: explain"] = ""
 
     return answer
@@ -202,18 +203,20 @@ def question5():
     # Read appropriate section of book chapter 3
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["a"] = ""
-    explain["a explain"] = ""
+    explain["a"] = "Model 2"
+    explain["a explain"] = "This is because model-2 is pruned version and it is less likely to overfit the data and have better performances on unseen data."
+
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["b"] = ""
-    explain["b explain"] = ""
+    explain["b"] = "Model 1"
+    explain["b explain"] = "Even though Model 1 performed better on the combined dataset (A + B), Model 2 would be the better option for classification tasks because of its better generalization capabilities. Importantly for real-world applications, Model 2 is more likely to perform well on unknown situations and is less likely to overfit to the training data."
 
-    explain["c similarity"] = ""
-    explain["c similarity explain"] = ""
 
-    explain["c difference"] = ""
-    explain["c difference explain"] = ""
+    explain["c similarity"] = "Regularization"
+    explain["c similarity explain"] = "In order to aid in model selection and prevent overfitting, they both seek to incorporate model complexity into the loss function."
+
+    explain["c difference"] = ""Criterion"
+    explain["c difference explain"] = ""One difference between them is how they go about calculating model complexity, especially when it comes to decision trees."
 
     return explain
 
