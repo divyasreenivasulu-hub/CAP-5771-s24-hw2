@@ -79,24 +79,35 @@ def question1():
 
 
 # ----------------------------------------------------------------------
-
-
 def question2():
     answer = {}
 
     # Answers are floats
-    answer["(a) entropy_entire_data"] = 0.
+    answer["(a) entropy_entire_data"] = 1.0
+
     # Infogain
-    answer["(b) x <= 0.2"] = 0.
-    answer["(b) x <= 0.7"] = 0.
-    answer["(b) y <= 0.6"] = 0.
+    answer["(b) x < 0.2"] = 0.46438561897747244
+    answer["(b) x < 0.7"] = 0.3602012209808308
+    answer["(b) y < 0.6"] = 0.44217935649972373
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
-    answer["(c) attribute"] = ""  
+    answer["(c) attribute"] = "x = 0.7"
 
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
-    tree = u.BinaryTree("Root")
+    tree = u.BinaryTree("y = 0.7")
+    tree.insert_left("x=0.7")
+    tree.left.insert_left("B")
+    tree.left.insert_right("y=0.3")
+    tree.left.right.insert_left("A")
+    tree.left.right.insert_right("C")
+
+    tree.insert_right("x=0.2")
+    tree.right.insert_left("y=0.8")
+    tree.right.insert_right("A")
+    tree.right.left.insert_left("C")
+    tree.right.left.insert_right("B")
+    tree.print_tree()
     answer["(d) full decision tree"] = tree
 
     return answer
@@ -246,19 +257,19 @@ def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 1.0
-    answer["b, info gain, Handedness"] = 0.5310044
+    answer["a, info gain, ID"] = 0.0
+    answer["b, info gain, Handedness"] = -1.474
 
     # string: "ID" or "Handedness"
-    answer["c, which attrib"] = "Handedness"
+    answer["c, which attrib"] = "Based on the information gain, Handedness should not be chosen as the splitting attribute because it results in negative information gain. So we will choose the ID attribute"
 
     # answer is a float
-    answer["d, gain ratio, ID"] = 0.23137821315975915
-    answer["e, gain ratio, Handedness"] = 0.531
+    answer["d, gain ratio, ID"] = 0.0
+    answer["e, gain ratio, Handedness"] = -0.737
 
     # string: one of 'ID' or 'Handedness' based on gain ratio
     # choose the attribute with the largest gain ratio
-    answer["f, which attrib"] = "Handedness"
+    answer["f, which attrib"] = "Based"
 
     return answer
 
